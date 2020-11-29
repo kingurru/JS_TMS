@@ -43,7 +43,5 @@ sortAdult = []
 for (let i in adult) {
     sortAdult.push(adult[i].age)
 }
-sortAdult.sort(function (a, b) {
-    return b - a
-})
+sortAdult.sort((a, b) => b - a)
 console.log(...sortAdult)
