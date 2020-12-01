@@ -35,14 +35,14 @@ console.log(usersAfterYearUniqueAge)*/
 
 // todo: task not working
 let usersAfterYearUniqueAge = usersAfterYear.reduce((arr, item) => {
-        if (arr.indexOf(item.age) === -1) {
+        const index = arr.findIndex(el => el.age === item.age)
+        if (index !== -1) {
             console.log(arr.indexOf(item.age))
             console.log(item.age)
             console.log(item)
-
-            return arr
-        }
-        return arr
+        } else {
+            arr.push(item)
+        } return arr
     },
     []
 )
