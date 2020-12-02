@@ -1,8 +1,8 @@
 /*TODO:task
       Дан объект let user = { name: "Ivan", years: 19, car: "Subaru", telePhone: "iPhone", city: "Minsk" }.
-	  Запишите поле name в переменную userName, поле year в переменную userName,
+	  Запишите поле name в переменную userYears, поле year в переменную userName,
 	  поле car в переменную userCar, остальные поля записать в объект userOtherInfo;*/
-Деструктиризация
-let user = { name: "Ivan", years: 19, car: "Subaru", telePhone: "iPhone", city: "Minsk" }
+let user = {name: "Ivan", years: 19, car: "Subaru", telePhone: "iPhone", city: "Minsk"}
+let {name: userName, years: userYears, car: userCar, ...userOtherInfo} = user
 
-let {name, years, car} = user
+console.log(`${userName}, ${userYears}, ${userCar}, ${userOtherInfo.telePhone}, ${userOtherInfo.city}`)
