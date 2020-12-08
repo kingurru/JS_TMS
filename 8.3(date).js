@@ -5,11 +5,16 @@
     (например 05.12.2020);*/
 
 
-let date = () => {
+let today = () => {
     if ((new Date).getDate() < 10) {
         return `0${(new Date).getDate()}`
     }
 }
-let today = [date(), (new Date).getMonth(), (new Date).getFullYear()].join('.')
-console.log(today)
-console.log(date())
+let today1 = [(new Date).getDate(), (new Date).getMonth(), (new Date).getFullYear()].join('.')
+let today2 = [today(), (new Date).getMonth(), (new Date).getFullYear()].join('.')
+let today3 = (new Date).getDate().toString().length === 2 ? today1 : "0" + today1
+console.log(today1)
+console.log(today2)
+console.log(today3)
+console.log(today())
+
