@@ -3,5 +3,5 @@
 	  следования элементов запишите первые два элемента массива в переменные firstElement, secondElement, число 89 (четвертый элемент массива) в переменную fifthElement. Остальные элементы после 89 запишите в массив otherElements;*/
 
 let arr = [1, "str", 24, {name: "Ivan"}, 89, undefined, "10"]
-let [firstElement, secondElement, ,fifthElement, ...otherElements] = arr
-console.log(`${firstElement}, ${secondElement}, ${fifthElement.name}, ${otherElements}`)
+let [firstElement, secondElement, , ,fifthElement, ...otherElements] = arr
+console.log(`${firstElement}, ${secondElement}, ${fifthElement}, ${otherElements[0]}, ${otherElements[1]}, ${otherElements}`)
