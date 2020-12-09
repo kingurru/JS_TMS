@@ -39,9 +39,18 @@ let arr = [
 ];
 adult = arr.filter(person => person.age >= 18)
 child = arr.filter(person => person.age < 18)
+
 sortAdult = []
 for (let i in adult) {
-    sortAdult.push(adult[i].age)
+    sortAdult.push(adult[i])
 }
-sortAdult.sort((a, b) => b - a)
+
+sortChild = []
+for (let i in child) {
+    sortChild.push(child[i])
+}
+
+sortAdult.sort((a, b) => b.age - a.age)
 console.log(...sortAdult)
+sortChild.sort((a, b) => b.age - a.age)
+console.log(...sortChild)
