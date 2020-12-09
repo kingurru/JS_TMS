@@ -6,7 +6,7 @@ let counterValue = () => {
     let i = 0
     let timerId = setInterval(() => {
             console.log(i++)
-            if (i === 21) {
+            if (i === 20) {
                 clearInterval(timerId)
             }
         }, 2000
