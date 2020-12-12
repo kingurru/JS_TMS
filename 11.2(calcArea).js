@@ -13,15 +13,15 @@ function HouseBuilder(width, length, floor) {
 }
 
 HouseBuilder.prototype.calcArea = function () {
-    return  `${this.width * this.length * this.floor}`
+    return  +`${this.width * this.length * this.floor}`
 
 }
 
 let a100 = new HouseBuilder(300, 400, 15)
 let mapid = new HouseBuilder(200, 250, 11)
 
-a100.totalArea = +a100.calcArea()
-mapid.totalArea = +mapid.calcArea()
+a100.totalArea = a100.calcArea()
+mapid.totalArea = mapid.calcArea()
 
 console.log(a100, mapid)
 
