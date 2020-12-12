@@ -15,4 +15,5 @@ function Users(first_name, second_name, age, city) {
 let user1 = new Users("Mikita", "Makarov", 33, "Kiev")
 let user2 = new Users("Vlad", "Vilich", 44, "Moscow")
 
-console.log(user1.info(), user2.info())
+user1.info()
+user2.info()
