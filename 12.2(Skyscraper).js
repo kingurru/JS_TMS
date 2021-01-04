@@ -29,8 +29,7 @@ class Skyscraper extends House {
     }
 
     get fullArea() {
-        let total = this.length * this.width * this.floors
-        return total
+        return this.length * this.width * this.floors
     }
 
     set fullArea(value) {
