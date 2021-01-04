@@ -38,7 +38,7 @@ class Skyscraper extends House {
 
     set fullArea(value) {
         let total = this.length * this.width * this.floors
-        if (value < total) {
+        if (value <= total) {
             alert('Вы ничего не построили!')
         } else {
             this.floors = Math.round(value / (this.length * this.width))
