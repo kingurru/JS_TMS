@@ -1,0 +1,45 @@
+1) На learn.javascript.ru изучить следующие статьи:
+	- https://learn.javascript.ru/browser-environment (Браузерное окружение, спецификации);
+	- https://learn.javascript.ru/dom-nodes (DOM-дерево);
+	- https://learn.javascript.ru/dom-navigation (Навигация по DOM дереву);
+	- https://learn.javascript.ru/searching-elements-dom (Поиск элементов);
+	- https://learn.javascript.ru/basic-dom-node-properties (Свойства элементов);
+	- https://learn.javascript.ru/dom-attributes-and-properties (Атрибуты и свойства);
+	- https://learn.javascript.ru/modifying-document (Изменение документа);
+	- https://learn.javascript.ru/styles-and-classes (Стили и классы);
+
+	Далее не так важные статьи, но прочитать для общего развития все равно
+	- https://learn.javascript.ru/size-and-scroll (Размеры и прокрутка элементов);
+	- https://learn.javascript.ru/size-and-scroll-window (Размеры и прокрутка окна);
+	- https://learn.javascript.ru/coordinates (Координаты);
+
+	Также кто хочет может немного начинать рассматривать раздел о событиях
+	- https://learn.javascript.ru/events
+
+2) Для лучешго закрпепления прочитанного советую посмотреть первые 10 уроков данного плейлиста:
+	- https://www.youtube.com/watch?v=UbUQqcy7e9s&list=PLA0M1Bcd0w8zri9wWiDFmOukXhguEYBBO&ab_channel=selfedu
+
+3) Практика:
+	Перед тем как решать задачи просмотрите всю теорию и порешайте задачи в конце каждой статьи посмотрите задачи, ведь на их основе составлена ваша практика.
+	Для решения практики подготовьте сразу окружение (файл index.html, папка assets в которой есть папка scripts (там храняться ваши js файлы)
+	  и папка styles (там храняться ваши css файлы)).
+
+	- Дана html страница (вставьте ее код в свой index.html файл):
+	  <html>
+ 	  <body>
+  	    <h1>Пользователи:</h1>
+  	    <ul class="users-list">
+    	       <li>Джек</li>
+    	       <li>Майк</li>
+	       <li>Сэм</li>
+	       <li>Джон</li>
+  	    </ul>
+	  </body>
+	  </html>
+	  Напишите код как получить h1, ul, коллекцию элементов li, коллекцию четных элементов li, коллекцию нечетных элементов li (для этого вспоминаем odd, even в css).
+
+	- Добавьте для всех четных элементов li красный цвет текста. А для нечетных элементов синий цвет текста (это можно сделать через styles).
+
+	- Задание со звездочкой. Для всех нечетных переключение цвета с красного на синий каждый две секунды(вначале красный через 2 секунды синий, потом через 2 секунды опять красный и т.д.).
+	  А для нечентных элементов переключение с синего на красный цвет каждые две секунды(вначале синий 2 секунды через 2 секунды красный, потом через 2 секунды опять синий и т.д.).
+	  Для этого использовать setInterval.
