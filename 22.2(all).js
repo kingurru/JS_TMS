@@ -16,8 +16,8 @@ function cleanRoom(dirtyLevel) {
   })
 }
 
-function cleanRooms(dirtyLevel_1, dirtyLevel_2, dirtyLevel_3) {
-  return Promise.all([cleanRoom(dirtyLevel_1), cleanRoom(dirtyLevel_2), cleanRoom(dirtyLevel_3)])
+async function cleanRooms(dirtyLevel_1, dirtyLevel_2, dirtyLevel_3) {
+  await Promise.all([cleanRoom(dirtyLevel_1), cleanRoom(dirtyLevel_2), cleanRoom(dirtyLevel_3)])
     .then(() => console.log('Cleaning completed'))
     .catch(err => console.log(err))
 }
