@@ -4,25 +4,43 @@
    - Расширьте предыдущее задание так, чтобы при передаче в dirtyLevel > 10 вы спустя dirtyLevel * 1000 мс возвращали выполненный с ошибкой промис. Для обработки неуспешной уборки в then используйте console.log(err).
     Где err это аргумент reject. Текст ошибки придумайте сами.
  */
+//todo var1
 
 let cleanRoom = function (dirtyLevel) {
-    if (dirtyLevel > 0) {
-        return new Promise(function (resolve, reject) {
-            let spentTime = dirtyLevel * 1000
-            let maxSpentTime = 10
-            if (dirtyLevel > 10) {
-                setTimeout(() => reject('Cleaning is incomplete, I\'m tired'), 1000 * maxSpentTime)
-            } else setTimeout(() => resolve(spentTime / 1000), spentTime);
-        })
-            .finally(() => console.log('Time is over'))
-            .then(
-                result => console.log(`Cleaning COMPLETED in ${result} seconds`),
-                err => console.log(err))
-    } else {
-        dirtyLevel = prompt('Please enter a positive number')
-        cleanRoom(dirtyLevel)
-    }
-    return Promise
+  if (dirtyLevel > 0) {
+
+    return new Promise(function (resolve, reject) {
+
+      setTimeout(() => {
+        if (dirtyLevel <= 10) resolve(dirtyLevel)
+        reject("The room is very dirty")
+      }, dirtyLevel * 1000)
+    })
+      .then(result => console.log(`Cleaning completed in ${result} seconds`))
+      .catch(err => console.log(err))
+
+  } else {
+    dirtyLevel = prompt('Please enter a positive number')
+    return cleanRoom(dirtyLevel)
+  }
 }
 
-let firstClean = cleanRoom(113)
+cleanRoom(5)
+
+//todo var2
+/*
+
+function cleanRoom(dirtyLevel) {
+
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      if (dirtyLevel <= 10) resolve(dirtyLevel)
+      reject("The room is very dirty")
+    }, dirtyLevel * 1000)
+  })
+}
+
+cleanRoom(10)
+  .then(result => console.log(`Cleaning completed in ${result} seconds`))
+  .catch(err => console.log(err))
+  .finally(() => console.log('Time is over'))*/
