@@ -18,6 +18,7 @@ let cleanRoom = function (dirtyLevel) {
     })
       .then(result => console.log(`Cleaning completed in ${result} seconds`))
       .catch(err => console.log(err))
+      .finally(() => console.log('Time is over'))
 
   } else {
     dirtyLevel = prompt('Please enter a positive number')
