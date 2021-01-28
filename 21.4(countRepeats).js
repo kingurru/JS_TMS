@@ -20,10 +20,11 @@ function countRepeats(arr) {
     obj[prop]++ || (obj[prop] = 1)
   })
   let sortArr = Object.entries(obj).sort((a, b) => b[1] - a[1])
-  let sortObj = {}
-  for (let item of sortArr) {
-    sortObj[item[0]] = item[1]
-  }
+  let sortObj = Object.fromEntries(sortArr)
+  /* for (let item of sortArr) {
+     sortObj[item[0]] = item[1]
+   }*/
+
   return sortObj
 }
 
