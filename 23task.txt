@@ -1,0 +1,28 @@
+1) На learn.javascript.ru изучить следующие статьи:
+	- https://learn.javascript.ru/fetch (Fetch);
+	- https://learn.javascript.ru/formdata (Form Data);
+	- https://learn.javascript.ru/fetch-progress (Fetch: ход загрузки);
+
+2) Дополнительно разобраться с HTTP
+	- https://developer.mozilla.org/ru/docs/Web/HTTP (Введение в HTTP, хорошо разобраться);
+	- https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers (HTTP заголовки, ознакомиться);
+	- https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods (Методы HTTP-запроса, знать все);
+	- https://developer.mozilla.org/en-US/docs/Web/HTTP/Status (Коды ответа, знать о каждой группе и отдельно:
+	  200, 201, 204, 300, 301, 400, 401, 404, 403, 500, 501, 503);
+
+3) Практика:
+
+	- Изучить API https://jsonplaceholder.typicode.com/guide/;
+
+	- Отправьте GET на адресс 'https://jsonplaceholder.typicode.com/posts' после чего извлеките только первые 20 записей
+	  и отсортируйте их по убыванию длины title.
+
+	- Создайте html документ, в котором подключите script.js. В html файле создайте кнопку (любого вида).
+	  По нажатию на кнопку отправляйте с помощтю POST запроса на адресс https://jsonplaceholder.typicode.com/posts объект
+	  {
+    		title: 'foo',
+    		body: 'bar',
+    		userId: 1,
+  	  }
+	  В случае получения ответа создайте div, в котором будет храниться информация о полученном ответе (поля title и body ответа).
+	  Оформление div придумайте сами.
