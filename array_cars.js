@@ -23,12 +23,11 @@ console.log('edit:', cars)
 function qSort(arr, key) {
   if (!arr.length) return arr
   else {
-    let pivot = arr[Math.floor(Math.random()) * arr.length]
+    let pivot = arr[Math.floor(arr.length / 2)]
     let less = arr.filter(el => el[key] < pivot[key])
     let other = arr.filter(el => el[key] > pivot[key])
 
-    return [...qSort(less), pivot, ...qSort(other)]
+    return [...qSort(less, key), pivot, ...qSort(other, key)]
   }
 }
-
 console.log(qSort(cars, 'age'))
