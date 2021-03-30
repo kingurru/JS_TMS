@@ -8,24 +8,20 @@ b = c
 console.log(a, b, c)
 
 
-let arr = [-111, 2, 4, 10, 5, 19, 4, -14, 2, 1411]
+let arr = [-111, 2, -545454, 10, 453365, 19, 4, -14, 2, 1411]
 
 function findIndexMaxNumber(array) {
-  let min_index = -1
-  let max_index = -1
-  let min = +Infinity
-  let max = -Infinity
+  let min_index = 0
+  let max_index = 0
 
   for (let i = 0; i < array.length; i++) {
 
-    if (array[i] < min) {
-      min = array[i]
+    if (array[min_index] > array[i]) {
       min_index = i
       console.log('min_index', i,)
     }
 
-    if (array[i] > max) {
-      max = array[i]
+    if (array[max_index] < array[i]) {
       max_index = i
       console.log('max_index', i)
     }
@@ -35,7 +31,7 @@ function findIndexMaxNumber(array) {
   array[min_index] = array[max_index]
   array[max_index] = exchange
 
-  console.log(min_index, max_index)
+  console.log('min_index:', min_index, 'max_index:', max_index)
   console.log(array)
   return array
 }
